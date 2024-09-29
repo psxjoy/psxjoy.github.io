@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://psxjoy.com/about/index.html</loc>
+    
+    <lastmod>2024-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://psxjoy.com/2024/09/28/2024%E5%B9%B42%E6%9C%88%E5%9B%BD%E5%86%85%E8%A7%81%E8%AF%81%E5%BC%80%E6%88%B7%E6%96%B9%E5%BC%8F/</loc>
     
     <lastmod>2024-09-28</lastmod>
@@ -37,19 +46,10 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://psxjoy.com/about/index.html</loc>
-    
-    <lastmod>2024-09-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://psxjoy.com/</loc>
-    <lastmod>2024-09-28</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -57,14 +57,14 @@
   
   <url>
     <loc>https://psxjoy.com/tags/%E6%8A%95%E8%B5%84/</loc>
-    <lastmod>2024-09-28</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://psxjoy.com/tags/%E9%9D%9E%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2024-09-28</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
