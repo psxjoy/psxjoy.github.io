@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favor.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favor.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ffavor.png">
+  <link rel="mask-icon" href="/images/favor.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"psxjoy.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="如果两年前有人跟我说，我会在线下和一群搞开源的“头像党”面对面聊天，我肯定会笑着说：“你别逗了。”那时候的我，每天对着接口写代码、调 bug，就是个标准的后端“码农”。和开源唯一的交集，大概也就是项目里引用的那些开源库了吧。 但人生就是这么神奇，总会在不经意间来个“剧情反转”。因为一次偶然的工作机会，我闯进了开源的世界。一路跌跌撞撞，也慢慢在这个圈子里找到了自己的节奏。最终在2025年参加了Com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CommunityOverCode Asia 2025：代码之外，我们终于见面了！">
+<meta property="og:url" content="https://psxjoy.com/2025/08/15/2025-08-CommunityOverCode/index.html">
+<meta property="og:site_name" content="psxjoy&#39;s Blog">
+<meta property="og:description" content="如果两年前有人跟我说，我会在线下和一群搞开源的“头像党”面对面聊天，我肯定会笑着说：“你别逗了。”那时候的我，每天对着接口写代码、调 bug，就是个标准的后端“码农”。和开源唯一的交集，大概也就是项目里引用的那些开源库了吧。 但人生就是这么神奇，总会在不经意间来个“剧情反转”。因为一次偶然的工作机会，我闯进了开源的世界。一路跌跌撞撞，也慢慢在这个圈子里找到了自己的节奏。最终在2025年参加了Com">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/08/SAVE_49f0f74abcfcf.png">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/08/_cgi-bin_mmwebwx-bin_webwxgetmsgimg___MsgID_1174215711707257178_skey_@crypt_5e37f055_e2e9778f619762a3ee122503b40ccbbd_mmweb_appid_wx_webfilehelper_9eb9499108f5b.jpeg">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/08/_cgi-bin_mmwebwx-bin_webwxgetmsgimg___MsgID_8257684697769869461_skey_@crypt_5e37f055_e2e9778f619762a3ee122503b40ccbbd_mmweb_appid_wx_webfilehelper_6b34190faffaf.jpeg">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/08/_cgi-bin_mmwebwx-bin_webwxgetmsgimg___MsgID_6676765324856598049_skey_@crypt_5e37f055_e2e9778f619762a3ee122503b40ccbbd_mmweb_appid_wx_webfilehelper%20_1__956c7708cee92.jpeg">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/08/_cgi-bin_mmwebwx-bin_webwxgetmsgimg___MsgID_5912754613632556384_skey_@crypt_5e37f055_e2e9778f619762a3ee122503b40ccbbd_mmweb_appid_wx_webfilehelper%20_1__689b2cbee299f.jpeg">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/08/_cgi-bin_mmwebwx-bin_webwxgetmsgimg___MsgID_533602804623216882_skey_@crypt_5e37f055_e2e9778f619762a3ee122503b40ccbbd_mmweb_appid_wx_webfilehelper_58252cbdb68cb.jpeg">
+<meta property="article:published_time" content="2025-08-15T21:37:36.000Z">
+<meta property="article:modified_time" content="2026-01-14T06:42:53.858Z">
+<meta property="article:author" content="psxjoy">
+<meta property="article:tag" content="CommunityOverCode">
+<meta property="article:tag" content="Apache">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="总结">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/08/SAVE_49f0f74abcfcf.png">
+
+
+<link rel="canonical" href="https://psxjoy.com/2025/08/15/2025-08-CommunityOverCode/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://psxjoy.com/2025/08/15/2025-08-CommunityOverCode/","path":"2025/08/15/2025-08-CommunityOverCode/","title":"CommunityOverCode Asia 2025：代码之外，我们终于见面了！"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CommunityOverCode Asia 2025：代码之外，我们终于见面了！ | psxjoy's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74ZSJ5138P"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-74ZSJ5138P","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "kfz38rl6hh");
+</script>
+
+
+  <script async defer data-website-id="0d13c762-6033-4e04-8cbe-543b8e10a4e6" src="https://cloud.umami.is/script.js"></script>
+
+<link rel="dns-prefetch" href="https://waline-git-main-psxjoys-projects.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">psxjoy's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shuxin Pan</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E8%AF%86-CommunityOverCode-Asia"><span class="nav-number">1.</span> <span class="nav-text">初识 CommunityOverCode Asia</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8E%E5%85%B6%E5%BD%93%E8%A7%82%E4%BC%97%EF%BC%8C%E4%B8%8D%E5%A6%82%E4%B8%8A%E5%8F%B0%EF%BC%81"><span class="nav-number">2.</span> <span class="nav-text">与其当观众，不如上台！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%A6%E9%B2%A4%E6%97%B6%E5%88%BB%EF%BC%9A%E6%8B%BF%E4%B8%8B-TAC-%E5%B7%AE%E6%97%85%E8%B5%84%E5%8A%A9"><span class="nav-number">3.</span> <span class="nav-text">锦鲤时刻：拿下 TAC 差旅资助</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E4%BC%9A%E7%8E%B0%E5%9C%BA%EF%BC%9A%E4%BB%A3%E7%A0%81%E4%B9%8B%E5%A4%96%EF%BC%8C%E6%88%91%E4%BB%AC%E7%BB%88%E4%BA%8E%E8%A7%81%E9%9D%A2%E4%BA%86"><span class="nav-number">4.</span> <span class="nav-text">大会现场：代码之外，我们终于见面了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E4%BB%AC%EF%BC%8C%E6%89%8D%E6%98%AF%E7%9C%9F%E6%AD%A3%E7%9A%84%E8%8B%B1%E9%9B%84"><span class="nav-number">5.</span> <span class="nav-text">你们，才是真正的英雄</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A%EF%BC%9A"><span class="nav-number">5.1.</span> <span class="nav-text">注释：</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="psxjoy"
+      src="/images/1.JPG">
+  <p class="site-author-name" itemprop="name">psxjoy</p>
+  <div class="site-description" itemprop="description">If not now, when? If not me, who? 此时此刻，非我莫属！</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/psxjoy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;psxjoy" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/psxjoy@apache.org" title="E-Mail → psxjoy@apache.org" rel="noopener me"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/real_SimonPang" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;real_SimonPang" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://psxjoy.com/2025/08/15/2025-08-CommunityOverCode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.JPG">
+      <meta itemprop="name" content="psxjoy">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="psxjoy's Blog">
+      <meta itemprop="description" content="If not now, when? If not me, who? 此时此刻，非我莫属！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CommunityOverCode Asia 2025：代码之外，我们终于见面了！ | psxjoy's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CommunityOverCode Asia 2025：代码之外，我们终于见面了！
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-08-16 05:37:36" itemprop="dateCreated datePublished" datetime="2025-08-16T05:37:36+08:00">2025-08-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-01-14 14:42:53" itemprop="dateModified" datetime="2026-01-14T14:42:53+08:00">2026-01-14</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2025/08/15/2025-08-CommunityOverCode/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2025/08/15/2025-08-CommunityOverCode/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>如果两年前有人跟我说，我会在线下和一群搞开源的“头像党”面对面聊天，我肯定会笑着说：“你别逗了。”<br>那时候的我，每天对着接口写代码、调 bug，就是个标准的后端“码农”。和开源唯一的交集，大概也就是项目里引用的那些开源库了吧。</p>
+<p>但人生就是这么神奇，总会在不经意间来个“剧情反转”。因为一次偶然的工作机会，我闯进了开源的世界。一路跌跌撞撞，也慢慢在这个圈子里找到了自己的节奏。最终在2025年参加了CommunityOverCode Asia 大会。本文简要介绍我参会的前后历程，以及参会的见闻纪实。</p>
+<span id="more"></span>
+<h2 id="初识-CommunityOverCode-Asia"><a href="#初识-CommunityOverCode-Asia" class="headerlink" title="初识 CommunityOverCode Asia"></a>初识 CommunityOverCode Asia</h2><p>作为一名普通的Java后端开发者，我真正踏入开源世界只有两年左右。最开始，是因为工作上用到了阿里巴巴的 EasyExcel，出于好奇就顺手提了几个 PR，没想到一发不可收拾，从写代码、被 review、被打回重写，一路“打怪升级”，到了 2025 年 1 月，我居然被提名成了 Apache Committer。对我来说，这就像一个小小的“成就解锁”。</p>
+<p>随着时间推移，我开始跟越来越多的开源伙伴一起合作。不仅讨论技术，也会聊些工作生活中的趣事。渐渐地，我特别想线下见见他们，看看这些在网络世界里闪闪发光的“头像”，背后到底是一群什么样的人。</p>
+<p>就在这个时候，我通过 @Pil0txia[1] 的几篇文章，第一次知道了 CommunityOverCode（简称 Coc Asia）这个大会。那是 Apache 官方办的开发者盛会。</p>
+<p>我还记得第一次看他写的 2023、2024 年的参会记录，字里行间的那股兴奋劲儿，隔着屏幕都能感受到。那一刻，我在心里默默对自己说：<br><strong>2025 年，我也要去！</strong></p>
+<h2 id="与其当观众，不如上台！"><a href="#与其当观众，不如上台！" class="headerlink" title="与其当观众，不如上台！"></a>与其当观众，不如上台！</h2><p>想法一旦种下，就会一直生根发芽。我开始翻阅历届 Coc Asia 的资料，也在 @Pil0txia 的文章指引下，找到了多次举办大会的 ALC Beijing（Apache Local Community Beijing）[2]。</p>
+<p>其实那时距离 Coc Asia 2025 年的具体日程公布还很早，唯一确定的消息是：大会将在 7 月的北京举办。 这已经足够让我兴奋了——毕竟从杭州到北京并不算远，如果没有意外，我可能真的能够去现场凑凑热闹！</p>
+<p>时间很快来到 3 月，大会如期宣布开放议题征集。本来我打算“老老实实”当观众，去感受一下现场氛围。但当我看到“任何人都可以提交 session”那一行字时，心里突然蹦出一个念头：<br>“要不……我也去讲讲？”</p>
+<p>虽然我的开源经历不算特别长，技术水平也谈不上顶尖，但这一路也经历了不少有意思的事儿。说不定也能和大家分享一下经验、踩坑历程。<br>这个想法一出来，就像猫挠心一样，怎么都挥不走。在和社区伙伴、好友的交流鼓励下，我终于下定决心：与其做旁观者，不如更主动一点，成为一个 Speaker。</p>
+<p>我很快确定了两个方向：</p>
+<ul>
+<li>Apache 项目发布流程</li>
+<li>我的开源经历分享</li>
+</ul>
+<p>当时我在参与 Apache OzHera (Incubating)，于是就和 PPMC 的小伙伴说了我的想法。没想到他们几乎没犹豫，就鼓励我：“舒新，去吧！这也是让项目被更多人看到的机会，到时候咱们还能线下聚一波！”</p>
+<p>于是，整个 4 月我都在“想题目—查资料—自我否定—推翻重来”的循环里打转。直到截止前，我才鼓起勇气把几个 session 提交了出去。<br>接下来就是煎熬的等待，直到 5 月 30 日那天，我终于收到邮件：我的 session 被接受了！<br><br /></p>
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/08/SAVE_49f0f74abcfcf.png" alt="accpeted.png" title="accpeted.png" width="80%"  />
+</div>
+<br />
+
+<h2 id="锦鲤时刻：拿下-TAC-差旅资助"><a href="#锦鲤时刻：拿下-TAC-差旅资助" class="headerlink" title="锦鲤时刻：拿下 TAC 差旅资助"></a>锦鲤时刻：拿下 TAC 差旅资助</h2><p>虽然 Session 被接受了，但新的问题也随之而来：我怎么去北京？机票住宿加上各种花销，对于一个普通开发者来说，确实有点肉疼。这时候我突然想到了 TAC——Travel Assistance Committee[3]。简单说，就是 Apache 专门用来资助那些因为经济原因没法参会的开发者的差旅计划。</p>
+<blockquote>
+<p>旅行援助委员会(The Travel Assistance committee，简称TAC)于2008年9月重组，旨在为那些因经济原因无法参加各类ASF相关活动的成员提供资金支持。只要你对 Apache 社区有兴趣、正在参与或者希望参与的开发者都可以申请，不一定必须是 ASF Committer 或 PMC 成员。</p>
+</blockquote>
+<p>老实说，最初我根本不知道还有 TAC 这回事（事实上我在大会的3天里，发现几乎很少的开发者知道Apache TAC 计划）。<br>直到有一天，我在刷 Twitter 时，突然看到 ASF 的官方账号发了一条推文，鼓励想要参加活动，但是经历有困难的开发者申请 TAC（Travel Assistance Committee）资助。<br>我抱着“试试看”的心态，填了申请表，心想：虽然机会渺茫，但还是可以试一下的，万一呢？  </p>
+<p>申请完之后我也没太当回事，继续一边查机票、一边对比住宿，心里盘算着怎么把参会成本压到最低。<br>就在我翻着酒店页面的时候，5 月 11 日，惊喜发生了——我收到了 TAC 的邮件：**我被选中了！**这意味着我拿到了 Apache 官方的差旅资助，整个人都在电脑前差点原地起飞。</p>
+<p>TAC 资助有个要求：需要提前一天到场，协助大会做一些志愿者工作。于是我比大会正式开幕早一天抵达北京，顺便也和 TAC 的 项目负责人 Gavin McDonald 聊了几句。<br>他告诉我，北京这场活动大约有 20 多人申请 TAC，最终赞助了 10 个名额。<br>听到这，我才意识到自己真的有点像中了“锦鲤大奖”，既能参会又有官方支持，简直完美。</p>
+<h2 id="大会现场：代码之外，我们终于见面了"><a href="#大会现场：代码之外，我们终于见面了" class="headerlink" title="大会现场：代码之外，我们终于见面了"></a>大会现场：代码之外，我们终于见面了</h2><p>7 月25日，北京中关村国际会议中心。CommunityOverCode Asia 2025 正式开幕。</p>
+<br />
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/08/_cgi-bin_mmwebwx-bin_webwxgetmsgimg___MsgID_1174215711707257178_skey_@crypt_5e37f055_e2e9778f619762a3ee122503b40ccbbd_mmweb_appid_wx_webfilehelper_9eb9499108f5b.jpeg" alt="accpeted.png" title="accpeted.png" width="80%"  />
+</div>
+<br />
+
+<p>刚进场我就有点社恐发作——除了认识的几个 TAC 小伙伴，大多数人我都不熟啊。</p>
+<p>平时大家只在 GitHub 上用昵称、头像交流，到了现实世界，全都成了“陌生人”。于是现场经常能看到这样的画面：有人拿着手机偷偷点开 GitHub 主页，悄悄对比头像和真人——像是在玩一场大型“线下解锁头像匹配”。</p>
+<p>那些平时只在 Issue 里拌嘴、在 PR 里互相 review 的人，一个个鲜活地站在我面前。有些技术特别强的，还出奇地谦虚，甚至还有未毕业的学生，让人不得不感叹：这届开源人，卧虎藏龙啊。<br><br /></p>
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/08/_cgi-bin_mmwebwx-bin_webwxgetmsgimg___MsgID_8257684697769869461_skey_@crypt_5e37f055_e2e9778f619762a3ee122503b40ccbbd_mmweb_appid_wx_webfilehelper_6b34190faffaf.jpeg" alt="accpeted.png" title="accpeted.png" width="40%"  />
+</div>
+<br />
+大会现场的另一大“社交神器”，就是贴纸。大家对贴纸的热情简直超乎想象，常常交换、贴在电脑上，一台台笔记本被装点得五彩斑斓，仿佛在比拼“社区资历勋章”。
+
+<p>第一天时，大家还有些腼腆，多数人只是点头打招呼。但很快，气氛被打破了：有人开始组队一起听 session，有人约着晚上去聚餐。短短两天，大家的关系已经从“网友”变成了“多年老友”。<br><br /></p>
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/08/_cgi-bin_mmwebwx-bin_webwxgetmsgimg___MsgID_6676765324856598049_skey_@crypt_5e37f055_e2e9778f619762a3ee122503b40ccbbd_mmweb_appid_wx_webfilehelper _1__956c7708cee92.jpeg" alt="accpeted.png" title="accpeted.png" width="40%"  />
+</div>
+<br />
+
+<p>作为为 Apache 孵化器做开源贡献的人来说，我终于见到了 <strong>Justin Mclean</strong>——Apache IPMC 的VP。对我，甚至是所有Apache 孵化器的贡献者来说，Justin 真可谓是一位又爱又恨的人物——他对待发布环节一丝不苟，主动帮助孵化项目解决各种难题；但另一方面，他似乎眼里只有 <strong>规范</strong>，任何小问题都会被他 <strong>challenge</strong>，甚至有些“挑剔”，有时候着实让人无奈。</p>
+<br />
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/08/_cgi-bin_mmwebwx-bin_webwxgetmsgimg___MsgID_5912754613632556384_skey_@crypt_5e37f055_e2e9778f619762a3ee122503b40ccbbd_mmweb_appid_wx_webfilehelper _1__689b2cbee299f.jpeg" alt="accpeted.png" title="accpeted.png" width="80%"  />
+</div>
+<br />
+而当我终于站上讲台，准备分享我的 session 时，心里原本还有点忐忑不安。毕竟在这么多技术大佬面前，谁不紧张呢？但奇怪的是，台下的氛围完全打破了我的紧张感。大家积极互动，一些提问也明显是开放式问答的内容。
+
+<br />
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/08/_cgi-bin_mmwebwx-bin_webwxgetmsgimg___MsgID_533602804623216882_skey_@crypt_5e37f055_e2e9778f619762a3ee122503b40ccbbd_mmweb_appid_wx_webfilehelper_58252cbdb68cb.jpeg" alt="accpeted.png" title="accpeted.png" width="70%"  />
+</div>
+<br />
+自我评价一下，觉得讲得还不错，当然，也欢迎大家通过会议录播评价一下（因为录播的链接即将上线，谁知道会不会吐槽我呢？）。
+
+<h2 id="你们，才是真正的英雄"><a href="#你们，才是真正的英雄" class="headerlink" title="你们，才是真正的英雄"></a>你们，才是真正的英雄</h2><p>这次 CommunityOverCode Asia 2025 给我的体验就一句话：<strong>这是一个开源人的大型线下Party。</strong><br>三天的时间，我既是 TAC 的志愿者，给大家分贴纸、介绍项目；也是观众，认真听每一场 talk；也是讲师，在台上分享我的故事。这三重身份，让我对“开源社区”有了更立体的感受。</p>
+<p>感谢所有的赞助商，你们让CoC 能够正常举办下去（特别感谢 @tison 和 @ConradJam 的个人赞助）；感谢ALC Beijing 和志愿者们，你们的安排很合理，组织安排也是一如既往的优秀。</p>
+<p>但最想感谢的，还是所有参与开源的朋友们，我始终觉得：开源不仅仅是写代码，还是在为这个世界贡献一些有意义的东西。在这场开源派对上，你们让我真实体会到了开源的乐趣。</p>
+<p><strong>我想，我还会参加 Coc 2026</strong>。</p>
+<h3 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h3><p>[1]ALC Beijing 主页:<a target="_blank" rel="noopener" href="https://alc-beijing.github.io/alc-site/">https://alc-beijing.github.io/alc-site/</a></p>
+<p>[2]pil0txia 博客:<a target="_blank" rel="noopener" href="https://www.pil0txia.com/">https://www.pil0txia.com/</a></p>
+<p>[3]Aapche TAC 主页：<a target="_blank" rel="noopener" href="https://tac.apache.org/">https://tac.apache.org/</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>psxjoy
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://psxjoy.com/2025/08/15/2025-08-CommunityOverCode/" title="CommunityOverCode Asia 2025：代码之外，我们终于见面了！">https://psxjoy.com/2025/08/15/2025-08-CommunityOverCode/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/CommunityOverCode/" rel="tag"># CommunityOverCode</a>
+              <a href="/tags/Apache/" rel="tag"># Apache</a>
+              <a href="/tags/%E5%BC%80%E6%BA%90/" rel="tag"># 开源</a>
+              <a href="/tags/%E6%80%BB%E7%BB%93/" rel="tag"># 总结</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/01/28/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%88%90%E4%B8%BA%20Apache%20%E8%BD%AF%E4%BB%B6%E5%9F%BA%E9%87%91%E4%BC%9A%E7%9A%84%20Committer/" rel="prev" title="如何从零开始成为 Apache 软件基金会的 Committer">
+                  <i class="fa fa-angle-left"></i> 如何从零开始成为 Apache 软件基金会的 Committer
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/12/03/2025-11-Become-Seata-Committer/" rel="next" title="Community Over Code：成为 Apache Seata(Incubating) Committer 的思索与感悟">
+                  Community Over Code：成为 Apache Seata(Incubating) Committer 的思索与感悟 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">psxjoy</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">10k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">9 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://waline-git-main-psxjoys-projects.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀~","avatar":null,"meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":false,"requiredFields":["nick","mail"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2025/08/15/2025-08-CommunityOverCode/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+
+</body>
+</html>

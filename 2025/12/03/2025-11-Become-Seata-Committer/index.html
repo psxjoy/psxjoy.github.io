@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favor.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favor.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ffavor.png">
+  <link rel="mask-icon" href="/images/favor.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"psxjoy.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="2025年11月24日的上午，一个普通的工作日，我正在赶项目进度而疯狂 coding ，电脑右下角突然跳出了一封邮件提醒。点开一看——我被邀请成为 Apache Seata(Incubating) 的 Committer。        一时间，我的心情有点复杂，但更多的是那种从代码中突然跳脱出来，获得新身份的激动。于是带着兴奋的心情，回复邮件：  I am honored to accept t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Community Over Code：成为 Apache Seata(Incubating) Committer 的思索与感悟">
+<meta property="og:url" content="https://psxjoy.com/2025/12/03/2025-11-Become-Seata-Committer/index.html">
+<meta property="og:site_name" content="psxjoy&#39;s Blog">
+<meta property="og:description" content="2025年11月24日的上午，一个普通的工作日，我正在赶项目进度而疯狂 coding ，电脑右下角突然跳出了一封邮件提醒。点开一看——我被邀请成为 Apache Seata(Incubating) 的 Committer。        一时间，我的心情有点复杂，但更多的是那种从代码中突然跳脱出来，获得新身份的激动。于是带着兴奋的心情，回复邮件：  I am honored to accept t">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/12/1_invitate_to_become_committer_e4ff42a8be923.png">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/12/2_fix_typo_f1a0999ccc894.png">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/12/3_add_unit_test_2d6d77b1d1f29.png">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/12/4_assign_to_me_57a24d4632164.png">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/12/4_bug_fix_7f89a7141a371.png">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/12/5_join_group_52ed33f2003db.png">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/12/6_ppmc_talk_63936d19cb6b9.jpg">
+<meta property="article:published_time" content="2025-12-03T17:37:36.000Z">
+<meta property="article:modified_time" content="2026-01-14T06:42:53.858Z">
+<meta property="article:author" content="psxjoy">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="总结">
+<meta property="article:tag" content="Apache Seata">
+<meta property="article:tag" content="杂项">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic2.ziyuan.wang/user/psxjoy/2025/12/1_invitate_to_become_committer_e4ff42a8be923.png">
+
+
+<link rel="canonical" href="https://psxjoy.com/2025/12/03/2025-11-Become-Seata-Committer/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://psxjoy.com/2025/12/03/2025-11-Become-Seata-Committer/","path":"2025/12/03/2025-11-Become-Seata-Committer/","title":"Community Over Code：成为 Apache Seata(Incubating) Committer 的思索与感悟"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Community Over Code：成为 Apache Seata(Incubating) Committer 的思索与感悟 | psxjoy's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74ZSJ5138P"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-74ZSJ5138P","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "kfz38rl6hh");
+</script>
+
+
+  <script async defer data-website-id="0d13c762-6033-4e04-8cbe-543b8e10a4e6" src="https://cloud.umami.is/script.js"></script>
+
+<link rel="dns-prefetch" href="https://waline-git-main-psxjoys-projects.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">psxjoy's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shuxin Pan</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E6%98%AF%E2%80%9C%E5%85%A5%E5%9C%BA%E5%88%B8%E2%80%9D%E2%80%94%E2%80%94%E6%88%91%E7%9A%84%E8%B4%A1%E7%8C%AE%E4%B9%8B%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">代码是“入场券”——我的贡献之路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%9D%A1-PR%EF%BC%9A%E4%BB%8E%E2%80%9C%E4%BF%AE%E6%96%87%E6%A1%A3%E2%80%9D%E5%BC%80%E5%A7%8B"><span class="nav-number">1.1.</span> <span class="nav-text">第一条 PR：从“修文档”开始</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%90%E5%85%A5%E4%BD%B3%E5%A2%83%EF%BC%9A%E6%8C%91%E6%88%98%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95"><span class="nav-number">1.2.</span> <span class="nav-text">渐入佳境：挑战单元测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%B2%E7%A0%B4%E9%9A%BE%E5%85%B3%EF%BC%9A%E6%8C%91%E6%88%98%E6%9E%81%E9%99%90"><span class="nav-number">1.3.</span> <span class="nav-text">冲破难关：挑战极限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E6%AD%A2%E4%BA%8E%E4%BB%A3%E7%A0%81%E2%80%94%E2%80%94Apache-Seata-%E7%9A%84%E7%8B%AC%E7%89%B9%E6%96%87%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">不止于代码——Apache Seata 的独特文化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8E%E7%BA%BF%E4%B8%8A%E5%88%B0%E7%BA%BF%E4%B8%8B%EF%BC%9A%E7%A4%BE%E5%8C%BA%E4%BA%92%E5%8A%A8%E7%9A%84%E7%9C%9F%E5%AE%9E%E6%B8%A9%E5%BA%A6"><span class="nav-number">2.1.</span> <span class="nav-text">从线上到线下：社区互动的真实温度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A6%BB%E5%BC%80%E4%B8%8E%E5%BD%92%E6%9D%A5%EF%BC%9A%E7%A4%BE%E5%8C%BA%E7%9A%84%E5%8C%85%E5%AE%B9%E6%80%A7"><span class="nav-number">2.2.</span> <span class="nav-text">离开与归来：社区的包容性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E2%80%9C%E4%BB%A3%E7%A0%81%E2%80%9D%E5%88%B0%E2%80%9C%E4%BA%A7%E5%93%81%E2%80%9D%E7%9A%84%E5%BF%83%E6%80%81%E8%BD%AC%E5%8F%98"><span class="nav-number">3.</span> <span class="nav-text">从“代码”到“产品”的心态转变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="nav-number">4.</span> <span class="nav-text">写在最后</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="psxjoy"
+      src="/images/1.JPG">
+  <p class="site-author-name" itemprop="name">psxjoy</p>
+  <div class="site-description" itemprop="description">If not now, when? If not me, who? 此时此刻，非我莫属！</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/psxjoy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;psxjoy" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/psxjoy@apache.org" title="E-Mail → psxjoy@apache.org" rel="noopener me"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/real_SimonPang" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;real_SimonPang" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://psxjoy.com/2025/12/03/2025-11-Become-Seata-Committer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.JPG">
+      <meta itemprop="name" content="psxjoy">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="psxjoy's Blog">
+      <meta itemprop="description" content="If not now, when? If not me, who? 此时此刻，非我莫属！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Community Over Code：成为 Apache Seata(Incubating) Committer 的思索与感悟 | psxjoy's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Community Over Code：成为 Apache Seata(Incubating) Committer 的思索与感悟
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-12-04 01:37:36" itemprop="dateCreated datePublished" datetime="2025-12-04T01:37:36+08:00">2025-12-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-01-14 14:42:53" itemprop="dateModified" datetime="2026-01-14T14:42:53+08:00">2026-01-14</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2025/12/03/2025-11-Become-Seata-Committer/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2025/12/03/2025-11-Become-Seata-Committer/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>2025年11月24日的上午，一个普通的工作日，我正在赶项目进度而疯狂 coding ，电脑右下角突然跳出了一封邮件提醒。点开一看——我被邀请成为 Apache Seata(Incubating) 的 Committer。</p>
+<br />
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/12/1_invitate_to_become_committer_e4ff42a8be923.png" alt="1_invitate_to_become_committer_e4ff42a8be923.png" title="accpeted.png" width="60%"  />
+</div>
+<br />
+
+
+<p>一时间，我的心情有点复杂，但更多的是那种从代码中突然跳脱出来，获得新身份的激动。于是带着兴奋的心情，回复邮件：</p>
+<blockquote>
+<p>I am honored to accept the offer to become a committer of the Apache Seata(Incubating) project.</p>
+</blockquote>
+<p>从 2024 年 10 月接触到 Apache Seata(Incubating)，到成为项目 Committer，经历了一年多的摸索与实践，回首这段开源经历，让我深刻感受到了 Apache 软件基金会（ASF）倡导的<strong>Community Over Code</strong>理念，这不仅仅是一个口号，它真的会影响开源项目的发展与进步。</p>
+<span id="more"></span>
+
+<h2 id="代码是“入场券”——我的贡献之路"><a href="#代码是“入场券”——我的贡献之路" class="headerlink" title="代码是“入场券”——我的贡献之路"></a>代码是“入场券”——我的贡献之路</h2><h3 id="第一条-PR：从“修文档”开始"><a href="#第一条-PR：从“修文档”开始" class="headerlink" title="第一条 PR：从“修文档”开始"></a>第一条 PR：从“修文档”开始</h3><p>熟悉我的人知道，我开源之路的起步总是非常“简朴”——找个 Typo或者修复个 URL。Apache Seata(Incubating) 也不例外，最初的贡献几乎都集中在文档修复上。<br><br /></p>
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/12/2_fix_typo_f1a0999ccc894.png" alt="2_fix_typo_f1a0999ccc894.png" title="accpeted.png" width="60%"  />
+</div>
+<br />
+翻开 Seata 的 Issue 列表，我一眼就看中了那些看似微不足道，但却迫切需要修复的点。虽然一开始的贡献微小，但这也是我与 Seata 社区第一次建立连接的机会，同时也帮助我摆脱了“开源恐惧症”——毕竟，只有动手修文档才能证明“我不是来占坑的”。
+
+<h3 id="渐入佳境：挑战单元测试"><a href="#渐入佳境：挑战单元测试" class="headerlink" title="渐入佳境：挑战单元测试"></a>渐入佳境：挑战单元测试</h3><p>不过，作为一个“有追求”的开源爱好者，单修文档显然不够满足。我很快瞄上了 Seata 另一个亟待填补的领域——<strong>单元测试</strong>。我一边熟悉代码，一边提交了各种单元测试用例的 PR。<br><br /></p>
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/12/3_add_unit_test_2d6d77b1d1f29.png" alt="3_add_unit_test_2d6d77b1d1f29.png" title="accpeted.png" width="60%"  />
+</div>
+<br />
+
+
+<p>事实上，我和其他开源爱好者交流过，大家一致认为，最适合新人的切入点就是单元测试：既能快速了解代码的微观细节，又能为项目贡献高质量的测试用例，提升代码稳定性。这不光是提升技术深度的好机会，也是一种进入“核心圈”的捷径。</p>
+<h3 id="冲破难关：挑战极限"><a href="#冲破难关：挑战极限" class="headerlink" title="冲破难关：挑战极限"></a>冲破难关：挑战极限</h3><p>不过，最让我记忆犹新的，还是 Apache Seata(Incubating) 的双周会机制。很多开源项目都有类似的活动，但 Seata 几乎是一种“长久的信仰”，从加入 seata 的贡献到现在，双周会几乎从来没有取消或者推迟过，甚至人数也有增无减，我几乎每次都能从会议中获得灵感与动力。</p>
+<p>有一次，我在双周会中发现了一个问题，最初由另一位 ASF 项目的 Committer 提出。PPMC 成员 <a target="_blank" rel="noopener" href="https://github.com/xingfudeshi">@xingfudeshi</a> 看着那条 Issue 时主动说：“这个问题我们还没来得及处理，有兴趣的可以认领一下。”</p>
+<p>我当时并未直接认领，而是回去琢磨了一下，发现这个 Issue 还没人认领的原因其实有两点：首先，涉及的版本和环境配置繁琐，复现难度较高；其次，复现步骤冗长复杂，看到就让人头疼。</p>
+<p>经过半小时的自我“斗争”，我终于决定挑战一下，直接认领了这个 Issue，并给自己定下了目标——<strong>一周之内搞定</strong>。</p>
+<br />
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/12/4_assign_to_me_57a24d4632164.png" alt="4_assign_to_me_57a24d4632164.png" title="accpeted.png" width="60%"  />
+</div>
+<br />
+
+<p>从那一刻起，我进入了“战斗模式”。记得那天凌晨 3 点，我搭建好了所有环境；第二天醒来后，开始复现问题；成功复现后，立马着手修复，甚至还注册了docker的官方账号，构建 Docker 镜像进行验证。最终，我成功修复了问题并按时完成了任务。</p>
+<br />
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/12/4_bug_fix_7f89a7141a371.png" alt="4_bug_fix_7f89a7141a371.png" title="accpeted.png" width="60%"  />
+</div>
+<br />
+
+
+<p>在这段经历中，我几乎变成了一个<strong>挑战者</strong>，把自己的贡献率和修复的难度当做追求的目标，开始享受解决问题的快感。</p>
+<h2 id="不止于代码——Apache-Seata-的独特文化"><a href="#不止于代码——Apache-Seata-的独特文化" class="headerlink" title="不止于代码——Apache Seata 的独特文化"></a>不止于代码——Apache Seata 的独特文化</h2><h3 id="从线上到线下：社区互动的真实温度"><a href="#从线上到线下：社区互动的真实温度" class="headerlink" title="从线上到线下：社区互动的真实温度"></a>从线上到线下：社区互动的真实温度</h3><p>在提交了几个“还算可以”的 PR 后，我收到了 PPMC 成员 <a target="_blank" rel="noopener" href="https://github.com/funky-eyes">@funky-eyes</a>  的邀请，加入了项目贡献者群。</p>
+<br />
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/12/5_join_group_52ed33f2003db.png" alt="5_join_group_52ed33f2003db.png" title="accpeted.png" width="60%"  />
+</div>
+<br />
+
+<p>刚加入时，我心里有点小激动，想着能和这些大佬们同在一个群里，总算可以有机会看到社区的“幕后工作”了。然而，没想到的是，Seata 的开发者群活跃得像是一个不断滚动的技术论坛——每天的消息量让你根本来不及掉线，群里不仅有 Code Review 和 Bug 排查，还有关于项目进展的讨论，甚至偶尔冒出一些 AI 技术在开源中的新尝试。大家不仅仅是在讨论问题，也是在互相帮助、共成长。</p>
+<p>Seata 作为一个中国开发者主导的 ASF 项目，在全球范围内都有广泛的参与，我们甚至和来自韩国的开发者也在群里经常交流。这种跨地域的互动，虽然始于线上，却总给人一种温暖的归属感，仿佛每一个字背后都承载着相同的热情和信任。</p>
+<p>另外，想起刚加入的时候的一个小插曲，至今让我忍不住笑。刚进群时，我大言不惭地加了几个 PPMC 成员的微信，还特地在微信上和他们说：“未来我一定会成为 Apache Seata(Incubating) 的 Committer！”那时的我想通过贡献不断证明自己，甚至有点过于自信。现在回头想想，那时候的“豪言壮语”确实有点可笑。</p>
+<br />
+<div align=center>
+<img src="https://pic2.ziyuan.wang/user/psxjoy/2025/12/6_ppmc_talk_63936d19cb6b9.jpg" alt="6_ppmc_talk_63936d19cb6b9.png" title="accpeted.png" width="30%"  />
+</div>
+<br />
+
+
+<p>不过让我至今感激的是，项目的 PPMC 成员却并没有嘲笑我，而是先感谢了我的贡献，并鼓励我继续努力。他们没有因为我的“年轻气盛”而冷漠相待，反而给了我更多的支持和鼓励。这种真诚的态度让我从一开始就对这个项目有了深厚的好感，也让我意识到，真正的开源项目不仅仅在技术上追求极致，在社区文化上同样充满包容与温暖。</p>
+<p>今年的 7 月，我有幸参加了 CoC Asia 大会，也聆听了 Seata 相关的演讲。在大会上，平时在线上看着“严肃”的 PPMC 成员，在现场却变得无比随和，大家畅谈技术，探讨未来，氛围轻松愉快。这种反差让我意识到，所谓的“严格”，是因为他们对项目的认真，而“随和”，则是他们对每一个贡献者的尊重与包容。</p>
+<h3 id="离开与归来：社区的包容性"><a href="#离开与归来：社区的包容性" class="headerlink" title="离开与归来：社区的包容性"></a>离开与归来：社区的包容性</h3><p>开源是一场马拉松，而非百米冲刺。在参与贡献的过程中，我也并非一直在线。</p>
+<p>因为工作角色转变，中间有一段时间，我的工作重心暂时脱离了数据库和分布式事务相关领域，这导致我不得不暂时离开了社区一段时间。当我重新回到 Seata 社区时，心里其实多少有些忐忑：大家还记得我吗？我的 PR 还会被快速响应吗？</p>
+<p>不过，当我重新提交 PR 时，社区成员的反应让我倍感亲切——大家不仅热烈欢迎我的归来，还表示理解开源就是一种志愿行为，生活和工作总有优先级。</p>
+<p>更让我觉得难能可贵的是，社区在我离开的这段时间里，涌现了大量的新成员。这让我看到了 Apache Seata(Incubating) 的活力和无限可能——社区从不因为任何一个人的缺席而停滞，反而因包容与开放而吸引更多新血液。</p>
+<h2 id="从“代码”到“产品”的心态转变"><a href="#从“代码”到“产品”的心态转变" class="headerlink" title="从“代码”到“产品”的心态转变"></a>从“代码”到“产品”的心态转变</h2><p>这次回归后，我的心态发生了质的变化。以前，我专注于解决技术难题，修复 Bug，享受技术的深度。但现在，我开始思考<strong>如何让更多开发者用上 Seata，如何降低新用户的接入门槛</strong>。</p>
+<p>于是，我开始关注我曾经觉得“不够酷”的工作——<strong>优化文档、提升易用性、更新版本功能</strong>。文档曾经被我视为“苦活”，但我现在意识到——它是开源项目的“第一张脸”。没有清晰的文档，再完美的代码也是“空中楼阁”。</p>
+<p>因此，我开始投入更多时间去优化 User Guide，尝试为 Docker 镜像创建使用文档，更新过时的API内容。这些工作虽然没有修复 Bug 那样有即时的成就感，但却能让成百上千的开发者少走弯路，避免踩坑。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>成为 Apache Seata(Incubating) 的 Committer，对于我来说并不是终点，而是新征程的起点。</p>
+<p>感谢 Apache Seata(Incubating) 社区对我的信任，感谢每一位 Mentors 的教导和帮助。</p>
+<p><strong>Community Over Code</strong> 这句话，在Apache Seata(Incubating) 社区里，永远不是空洞的口号，它意味着——代码也许会被淘汰，但我们在社区中建立的连接、信任和文化，将会永久延续。</p>
+<p>最后，如果你还在犹豫是否参与开源，不妨和我一样，从修复一个 Typo 开始，或许下一个故事的主角，就是你。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>psxjoy
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://psxjoy.com/2025/12/03/2025-11-Become-Seata-Committer/" title="Community Over Code：成为 Apache Seata(Incubating) Committer 的思索与感悟">https://psxjoy.com/2025/12/03/2025-11-Become-Seata-Committer/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%BC%80%E6%BA%90/" rel="tag"># 开源</a>
+              <a href="/tags/%E6%80%BB%E7%BB%93/" rel="tag"># 总结</a>
+              <a href="/tags/Apache-Seata/" rel="tag"># Apache Seata</a>
+              <a href="/tags/%E6%9D%82%E9%A1%B9/" rel="tag"># 杂项</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/08/15/2025-08-CommunityOverCode/" rel="prev" title="CommunityOverCode Asia 2025：代码之外，我们终于见面了！">
+                  <i class="fa fa-angle-left"></i> CommunityOverCode Asia 2025：代码之外，我们终于见面了！
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">psxjoy</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">10k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">9 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://waline-git-main-psxjoys-projects.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀~","avatar":null,"meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":false,"requiredFields":["nick","mail"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2025/12/03/2025-11-Become-Seata-Committer/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+
+</body>
+</html>

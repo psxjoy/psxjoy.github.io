@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favor.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favor.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ffavor.png">
+  <link rel="mask-icon" href="/images/favor.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"psxjoy.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="最近收到了 Apache OzHera(Incubating)社区的邀请邮件，正式成为了这个项目的 Committer。 从年初的什么都不知道，到如今活跃在各个开源项目里的“老兵”，用现在比较流行的话来说，拿到了 Apache Committer 的资格，就相当于开源上了岸，进入了新的阶段。 下面就分享一下我的个人开源经历，希望对想要参与开源或者已经在其中的同事有所帮助。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何从零开始成为 Apache 软件基金会的 Committer">
+<meta property="og:url" content="https://psxjoy.com/2025/01/28/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%88%90%E4%B8%BA%20Apache%20%E8%BD%AF%E4%BB%B6%E5%9F%BA%E9%87%91%E4%BC%9A%E7%9A%84%20Committer/index.html">
+<meta property="og:site_name" content="psxjoy&#39;s Blog">
+<meta property="og:description" content="最近收到了 Apache OzHera(Incubating)社区的邀请邮件，正式成为了这个项目的 Committer。 从年初的什么都不知道，到如今活跃在各个开源项目里的“老兵”，用现在比较流行的话来说，拿到了 Apache Committer 的资格，就相当于开源上了岸，进入了新的阶段。 下面就分享一下我的个人开源经历，希望对想要参与开源或者已经在其中的同事有所帮助。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://free-img.400040.xyz/4/2025/01/29/6799213d5428e.png">
+<meta property="og:image" content="https://free-img.400040.xyz/4/2025/01/29/6799213ca7c0d.png">
+<meta property="og:image" content="https://free-img.400040.xyz/4/2025/01/29/6799213b44242.png">
+<meta property="og:image" content="https://free-img.400040.xyz/4/2025/01/29/6799213aa99ee.png">
+<meta property="og:image" content="https://free-img.400040.xyz/4/2025/01/29/679921393cf06.png">
+<meta property="og:image" content="https://free-img.400040.xyz/4/2025/01/29/679921393c631.png">
+<meta property="og:image" content="https://free-img.400040.xyz/4/2025/01/29/67992138ad55c.png">
+<meta property="article:published_time" content="2025-01-28T17:37:36.000Z">
+<meta property="article:modified_time" content="2026-01-14T06:42:53.858Z">
+<meta property="article:author" content="psxjoy">
+<meta property="article:tag" content="Apache">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="总结">
+<meta property="article:tag" content="杂项">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://free-img.400040.xyz/4/2025/01/29/6799213d5428e.png">
+
+
+<link rel="canonical" href="https://psxjoy.com/2025/01/28/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%88%90%E4%B8%BA%20Apache%20%E8%BD%AF%E4%BB%B6%E5%9F%BA%E9%87%91%E4%BC%9A%E7%9A%84%20Committer/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://psxjoy.com/2025/01/28/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%88%90%E4%B8%BA%20Apache%20%E8%BD%AF%E4%BB%B6%E5%9F%BA%E9%87%91%E4%BC%9A%E7%9A%84%20Committer/","path":"2025/01/28/如何从零开始成为 Apache 软件基金会的 Committer/","title":"如何从零开始成为 Apache 软件基金会的 Committer"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>如何从零开始成为 Apache 软件基金会的 Committer | psxjoy's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74ZSJ5138P"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-74ZSJ5138P","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "kfz38rl6hh");
+</script>
+
+
+  <script async defer data-website-id="0d13c762-6033-4e04-8cbe-543b8e10a4e6" src="https://cloud.umami.is/script.js"></script>
+
+<link rel="dns-prefetch" href="https://waline-git-main-psxjoys-projects.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">psxjoy's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shuxin Pan</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9D%E6%8E%A2%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA"><span class="nav-number">1.</span> <span class="nav-text">初探开源社区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E4%B8%8E-Apache-%E9%A1%B9%E7%9B%AE"><span class="nav-number">2.</span> <span class="nav-text">参与 Apache 项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache-OzHera"><span class="nav-number">2.1.</span> <span class="nav-text">Apache OzHera</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache-Seata"><span class="nav-number">2.2.</span> <span class="nav-text">Apache Seata</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%90%E4%B8%BA-Committer%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="nav-number">3.</span> <span class="nav-text">成为 Committer的好处</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Copilot"><span class="nav-number">3.1.</span> <span class="nav-text">Github Copilot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JetBrains"><span class="nav-number">3.2.</span> <span class="nav-text">JetBrains</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache-%E9%82%AE%E7%AE%B1"><span class="nav-number">3.3.</span> <span class="nav-text">Apache 邮箱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%86%99%E5%85%A5%E6%9D%83%E9%99%90"><span class="nav-number">3.4.</span> <span class="nav-text">项目的写入权限</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Apache-%E6%88%90%E5%91%98%E7%BB%84%E6%88%90"><span class="nav-number">4.</span> <span class="nav-text">Apache 成员组成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%B9%E5%88%AB%E8%AF%B4%E6%98%8E"><span class="nav-number">6.</span> <span class="nav-text">特别说明</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="psxjoy"
+      src="/images/1.JPG">
+  <p class="site-author-name" itemprop="name">psxjoy</p>
+  <div class="site-description" itemprop="description">If not now, when? If not me, who? 此时此刻，非我莫属！</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/psxjoy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;psxjoy" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/psxjoy@apache.org" title="E-Mail → psxjoy@apache.org" rel="noopener me"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/real_SimonPang" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;real_SimonPang" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://psxjoy.com/2025/01/28/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%88%90%E4%B8%BA%20Apache%20%E8%BD%AF%E4%BB%B6%E5%9F%BA%E9%87%91%E4%BC%9A%E7%9A%84%20Committer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.JPG">
+      <meta itemprop="name" content="psxjoy">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="psxjoy's Blog">
+      <meta itemprop="description" content="If not now, when? If not me, who? 此时此刻，非我莫属！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="如何从零开始成为 Apache 软件基金会的 Committer | psxjoy's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何从零开始成为 Apache 软件基金会的 Committer
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-29 01:37:36" itemprop="dateCreated datePublished" datetime="2025-01-29T01:37:36+08:00">2025-01-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-01-14 14:42:53" itemprop="dateModified" datetime="2026-01-14T14:42:53+08:00">2026-01-14</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2025/01/28/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%88%90%E4%B8%BA%20Apache%20%E8%BD%AF%E4%BB%B6%E5%9F%BA%E9%87%91%E4%BC%9A%E7%9A%84%20Committer/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2025/01/28/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%88%90%E4%B8%BA%20Apache%20%E8%BD%AF%E4%BB%B6%E5%9F%BA%E9%87%91%E4%BC%9A%E7%9A%84%20Committer/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>最近收到了 Apache OzHera(Incubating)社区的邀请邮件，正式成为了这个项目的 Committer。</p>
+<p>从年初的什么都不知道，到如今活跃在各个开源项目里的“老兵”，用现在比较流行的话来说，拿到了 Apache Committer 的资格，就相当于开源上了岸，进入了新的阶段。</p>
+<p>下面就分享一下我的个人开源经历，希望对想要参与开源或者已经在其中的同事有所帮助。</p>
+<span id="more"></span>
+
+<h1 id="初探开源社区"><a href="#初探开源社区" class="headerlink" title="初探开源社区"></a>初探开源社区</h1><p>2024年2月，我负责的一个项目上线后，客户反馈数据导出速度太慢，希望能尽快优化。同事建议我试试阿里巴巴的开源项目 EasyExcel 来替代 POI。照着网上示例一番捣鼓后，项目的数据导出效率果真大幅跃升，效果立竿见影。最终项目交付顺利，也得到了客户的肯定。</p>
+<p>可我心里却总像揣着个疙瘩：底层都是使用poi，但是速度竟能相差十几倍。这里面的原理究竟为何？自己竟全然不知，仅做了个依葫芦画瓢的 “搬运工”，这让骨子里不服输的我深感不甘。</p>
+<p>从那时起，我利用周末和休息时间钻研 EasyExcel 源码，也学习了 Excel 的一些规范和原理。随着项目研究的深入，我留意到 GitHub 上 项目的 issue 区里，诸多使用者提出形形色色的问题，其中不少是我在自学中遇到并解决过的。起初，我只是默默比对、暗自思索，确认自己的理解无误后，才敲下解决方法，试着为他人答疑解惑。</p>
+<p>事实上，每次回复都像是一场知识的 “反刍”，在梳理思路、组织语言的过程中，那些原本稍显生硬的知识点愈发融会贯通。掌握的知识愈发扎实，修复 BUG 和优化代码的底气也越来越足，我开始提交各种 PR，慢慢成为了社区中的常见开发人员之一 。随着在项目中的贡献越来越多，我也在6月正式受邀成为 EasyExcel 的外部协作者。</p>
+<div align=center>
+<img src="https://free-img.400040.xyz/4/2025/01/29/6799213d5428e.png" alt="easyexcel.png" title="easyexcel.png" width="40%"  />
+</div>
+可以说，Easyexcel 既是我的开源启蒙项目，也承载了我大部分的开源贡献经历。在阿里巴巴官方的开源项目贡献榜中，我也出不意外的拿到了EasyExcl 项目的年度第一名。
+<div align=center>
+<img src="https://free-img.400040.xyz/4/2025/01/29/6799213ca7c0d.png" alt="top1.png" title="top1.png"  align = "middle"  width="80%" />
+</div>
+
+<h1 id="参与-Apache-项目"><a href="#参与-Apache-项目" class="headerlink" title="参与 Apache 项目"></a>参与 Apache 项目</h1><h2 id="Apache-OzHera"><a href="#Apache-OzHera" class="headerlink" title="Apache OzHera"></a>Apache OzHera</h2><p>2024年，我的年度技术目标之一是实现业务项目的监控和排查。为此，我调研了多个相关开源库，例如 SkyWalking、HeartzBeat 等。经过一番比较，我发现 Apache Ozhera 最符合我的需求。而巧合的是，Ozhera 当时刚刚开源，正处于需要社区贡献的阶段，于是我决定加入，双方一拍即合。</p>
+<p>因为项目刚起步，所以前期最重要的反而不是功能开发。而是整体迁移至 Apache 的组织下。平时接触的Kafka、Dubbo 等项目，看上去更新版本很快。但是真正参与到 Apache 项目中来，发现自己还是想得太简单了。</p>
+<p>首先是版权商标问题。 Apache 要求所有的必要文件都要添加版权声明，同时也要符合 Apache 的相关规范。这意味着要将最基础的类路径，全部转换到 org.apache 的路径下。</p>
+<div align=center>
+<img src="https://free-img.400040.xyz/4/2025/01/29/6799213b44242.png" alt="asf.png" title="asf.png" width="70%"  />
+</div>
+之后我又深度参加了 项目的例会，讨论了项目的发展和RoadMap设计。
+
+<p>这个过程从第一个 PR 到社区提名我大概经历了半年的时间。</p>
+<p>越大型、严谨的项目在处理这些 PR 时就是缓慢的，所以如果你真的想深度参与某个项目时就一定要有充分的耐心。</p>
+<p>首先坚持下去，收获自然就来了。</p>
+<h2 id="Apache-Seata"><a href="#Apache-Seata" class="headerlink" title="Apache Seata"></a>Apache Seata</h2><p>今年十月份的时候我在朋友圈还看到另外一个项目：Apache Seata</p>
+<p>因为当时我也在做一些数据库的分布式事务的研究，正好这个项目的文档比较友好，于是我就跟着文档走了一遍。</p>
+<p>发现功能很强也很全，当时也是刚加入 Apache 的孵化器，所以还是有许多可以完善的地方。</p>
+<p>我就开始以单测作为切入点尝试贡献源码，社区的响应速度也非常快。</p>
+<p>之后逐渐将我在其他社区学到一些经验也复制到seata中，慢慢的贡献的代码越多，对 seata 也就更加熟悉了。</p>
+<div align=center>
+<img src="https://free-img.400040.xyz/4/2025/01/29/6799213aa99ee.png"  width="60%" />
+</div>
+
+<h1 id="成为-Committer的好处"><a href="#成为-Committer的好处" class="headerlink" title="成为 Committer的好处"></a>成为 Committer的好处</h1><h2 id="Github-Copilot"><a href="#Github-Copilot" class="headerlink" title="Github Copilot"></a>Github Copilot</h2><p>第一个好处是可以免费使用 GitHub Copilot。需要说明的是，这并非 Apache Committer 专属的权益，只要你是某个开源项目的活跃贡献者，就可以尝试申请免费使用（不过申请通过的标准目前并不明确）。然而，如果你已经成为了 Apache 项目的 Committer，那么申请通过基本上是板上钉钉的事。  </p>
+<div align=center>
+<img src="https://free-img.400040.xyz/4/2025/01/29/679921393cf06.png" alt="copliot.png" title="copliot.png" width="40%" />
+</div>
+
+<h2 id="JetBrains"><a href="#JetBrains" class="headerlink" title="JetBrains"></a>JetBrains</h2><div align=center>
+<img src="https://free-img.400040.xyz/4/2025/01/29/679921393c631.png" alt="jetbrains.png" title="jetbrains.png" width="60%" />
+</div>
+ 作为与开发者紧密相关的公司，JetBrains（JB）也为 Apache Committer 提供了相应的福利。只要使用 Apache 的邮箱，就可以免费获得 JetBrains 全家桶的使用权限 。
+
+<h2 id="Apache-邮箱"><a href="#Apache-邮箱" class="headerlink" title="Apache 邮箱"></a>Apache 邮箱</h2><p>提到邮箱，就不得不提到 Apache 会为每个 Committer 提供一个专属的邮箱。虽然市面上有各种免费的邮箱注册服务，但当你使用 Apache 提供的邮箱与他人沟通时，往往会给人一种更为专业、可信赖的印象。大多数人可能并不会直接说出来，但在潜意识中，看到一个 Apache 邮箱，往往会对你的技术能力和背景有更高的评价。  </p>
+<p>虽然这并不是硬性实力的体现，但它确实能够在一些需要展示自我或建立信任的场合，让沟通变得更加顺畅。  </p>
+<h2 id="项目的写入权限"><a href="#项目的写入权限" class="headerlink" title="项目的写入权限"></a>项目的写入权限</h2><p>还有一个好处就是，成为 Committer 后，你将获得项目的写权限。对于参与开源项目的开发者来说，这个权限是至关重要的。很多时候，当你提交一个 PR 后，可能会遇到审核进展缓慢，甚至长时间得不到回应和合并。那时你只能等待，或者反复催促，确实让人非常不爽。</p>
+<p>然而，一旦你拥有了写权限，在 PR 获得他人批准（Approve）后，只要风险可控，你就可以自己合并，不必再依赖 Maintainer 来处理。这大大提高了工作效率，减少了等待时间，使得项目的开发进程更加流畅。</p>
+<p>同时，由于在社区中的活跃度和参与度得到提升，你的 PR 会更容易受到重视，并且你可以更积极地推进某些功能的开发。这不仅对于你的个人成长和贡献感是一个很大的动力，对于依赖该开源项目的公司和团队来说，这也是一个重要的优势。能够及时合并关键的修复或功能，极大地提高了开发的响应速度和项目的健康度。对于需要快速迭代的企业，尤其是依赖某个开源项目作为基础设施的公司，能从中受益良多。</p>
+<h1 id="Apache-成员组成"><a href="#Apache-成员组成" class="headerlink" title="Apache 成员组成"></a>Apache 成员组成</h1><p> 相信看到这里，应该会有不少人对成为 Apache Committer 产生兴趣，也对究竟需要达到什么样的标准才能成为 Committer 感到好奇。</p>
+<p>以下是 Apache 官方提供的贡献阶梯，希望能帮助大家更清楚地了解这一过程。  </p>
+<div align=center>
+<img src="https://free-img.400040.xyz/4/2025/01/29/67992138ad55c.png" alt="people.png" title="people.png" width="90%" />
+</div>
+参与开源的人主要分为以下几种角色：
+- 普通用户
+- 贡献者
+- Committer
+- PMC 项目管理人员
+- 基金会管理人员
+- 基金会董事
+
+<p>整个路径其实是比较清晰的，但从 PMC 开始到后面的董事，难度可以说是指数级增加。目前在国内，当选 Apache 基金会董事的人屈指可数，由此可见其中的挑战。</p>
+<p>至于成为 Committer 的要求，有些社区会有比较明确的标准，比如提交了多少个高质量的 PR、参与了多少次 Code Review、推动了多少个 Issue 的解决等等。但这些标准并不是一成不变的。不同的社区对于活跃贡献者的评估可能略有差异，有些更看重技术贡献，有些则更注重社区建设的参与。</p>
+<p>核心的一点是 <strong>“持续活跃”</strong>。只要你在社区中保持持续的贡献，无论是修复 Bug、完善文档、参与讨论，还是推动项目的进展，当你的名字和头像变得熟悉后，自然会有相关的 PMC 成员提名你成为 Committer。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>参与开源的这一年，最初是出于纯粹的兴趣驱动。这种兴趣源于解决技术问题的满足感。然而，兴趣虽是动力，但要在繁忙的工作与生活中挤出时间参与开源，却并非易事。<br>在这一年中，我大部分参与开源的时间，都来自于休息和周末。利用零散的时间处理 Issues 或者修复 Bug是常事。而一些复杂的功能开发，往往需要投入更多的精力。有时候，为了解决一个疑难问题，甚至会在晚上通宵复现、排查、修复，直到把问题彻底解决才去休息（印象最深刻的一次，是周五晚上下班到家，就开始处理issue，一直到周六上午11点才全部解决完，上床睡觉）。</p>
+<p>很多时候，开源的确是“为爱发电”，没有任何报酬，甚至一些项目因为各种原因，可能会走向停止维护的结局——比如 EasyExcel 的经历便是一个例子(现在迁移到了FastExcel）。随着时间推移，合并的 PR 可能不像最初那样带来强烈的成就感，但每一次的贡献依然是对自己努力的回报。</p>
+<p>目前来看，我只是刚刚迈进开源世界的大门，半只脚站稳，另一只脚仍在探索。至于更高的层级，比如 Apache PMC、管理人员，甚至董事，那些位置对我来说还十分遥远。如果有一天，我真的有幸走到那一步，再和大家分享这一路的风景和感悟。  </p>
+<h1 id="特别说明"><a href="#特别说明" class="headerlink" title="特别说明"></a>特别说明</h1><p>此文章的整体架构，来源于<a href="crossoverjie.top">crossoverjie的博客</a>。crossoverjie 是一名技术强、爱分享的技术专家。欢迎大家关注他。</p>
+<p>参考链接：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://crossoverjie.top/2024/07/11/ob/%F0%9F%8E%89how-to-be-committer/">https://crossoverjie.top/2024/07/11/ob/%F0%9F%8E%89how-to-be-committer/</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>psxjoy
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://psxjoy.com/2025/01/28/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%88%90%E4%B8%BA%20Apache%20%E8%BD%AF%E4%BB%B6%E5%9F%BA%E9%87%91%E4%BC%9A%E7%9A%84%20Committer/" title="如何从零开始成为 Apache 软件基金会的 Committer">https://psxjoy.com/2025/01/28/如何从零开始成为 Apache 软件基金会的 Committer/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Apache/" rel="tag"># Apache</a>
+              <a href="/tags/%E5%BC%80%E6%BA%90/" rel="tag"># 开源</a>
+              <a href="/tags/%E6%80%BB%E7%BB%93/" rel="tag"># 总结</a>
+              <a href="/tags/%E6%9D%82%E9%A1%B9/" rel="tag"># 杂项</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/08/15/2025-08-CommunityOverCode/" rel="next" title="CommunityOverCode Asia 2025：代码之外，我们终于见面了！">
+                  CommunityOverCode Asia 2025：代码之外，我们终于见面了！ <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">psxjoy</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">10k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">9 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://waline-git-main-psxjoys-projects.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀~","avatar":null,"meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":false,"requiredFields":["nick","mail"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2025/01/28/%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%88%90%E4%B8%BA%20Apache%20%E8%BD%AF%E4%BB%B6%E5%9F%BA%E9%87%91%E4%BC%9A%E7%9A%84%20Committer/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+
+</body>
+</html>
